@@ -1,10 +1,8 @@
 
-import Test from "@/app/Components/Test"
-
 export default function Home() {
   return (
-    <div className="">
-      <Test />
+    <div className="max-w-7xl mx-auto">
+
     </div>
   );
 }
