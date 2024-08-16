@@ -69,7 +69,7 @@ export default function App() {
             </NavbarItem>
           </NavbarContent>
 
-          <NavbarContent className="flex items-center gap-4">
+          <NavbarContent style={{justifyContent: "endgit a"}} className="flex items-center gap-4">
             <Input
               classNames={{
                 base: "max-w-full sm:max-w-[10rem] h-10",
