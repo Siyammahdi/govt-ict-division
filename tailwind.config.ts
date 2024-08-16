@@ -11,11 +11,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Customizing NextUI secondary color
+        // Customizing colors
         secondary: {
           DEFAULT: "#4ade80", // Default secondary color
-          light: "#86efac",  // Light variant of the secondary color
-          dark: "#166534",   // Dark variant of the secondary color
+          light: "#86efac",   // Light variant of the secondary color
+          dark: "#166534",    // Dark variant of the secondary color
         },
       },
     },
@@ -25,10 +25,14 @@ const config: Config = {
     nextui({
       themes: {
         light: {
-          secondary: "#4ade80", // Custom secondary color in light mode
+          colors: {
+            secondary: "#4ade80", // Custom secondary color in light mode
+          },
         },
         dark: {
-          secondary: "#86efac", // Custom secondary color in dark mode
+          colors: {
+            secondary: "#86efac", // Custom secondary color in dark mode
+          },
         },
       },
     }),
