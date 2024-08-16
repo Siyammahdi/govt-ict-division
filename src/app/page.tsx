@@ -6,7 +6,7 @@ import InfoCards from "./Components/Home/InfoCards";
 
 export default function Home() {
   return (
-    <div className="dark:bg-slate-00">
+    <div className="dark:bg-gradient-to-r from-[#042f2e] to-[#022c22]">
       <Hero />
       <Board />
       <InCharge />

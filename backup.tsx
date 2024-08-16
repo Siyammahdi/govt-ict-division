@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import ComponentLayout from "../ComponentLayout";
-import { Card, Image, Link, LinkIcon } from "@nextui-org/react";
+import { Card, Image, Link } from "@nextui-org/react";
 import { FaLink } from "react-icons/fa";
 
 const HoverCard: React.FC<{
@@ -14,7 +14,7 @@ const HoverCard: React.FC<{
 
   return (
     <div
-      className={`bg-gradient-to-r from-[#006a4e] to-[#188f00] dark:from-[#064e3b] dark:to-[#14532d] mb-1 rounded-lg overflow-hidden transition-all duration-700 ease-in-out p-8 w-full ${
+      className={`bg-gradient-to-r from-[#006a4e] to-[#188f00] dark:bg-gradient-to-r from-[#064e3b] to-[#14532d] rounded-lg overflow-hidden transition-all duration-700 ease-in-out p-8 w-full ${
         isHovered ? "max-h-[350px]" : "max-h-[100px]"
       }`}
       onMouseEnter={() => setIsHovered(true)}
@@ -56,11 +56,8 @@ const HoverCard: React.FC<{
 const InfoCards: React.FC = () => {
   return (
     <ComponentLayout>
-      <h1 className="text-3xl px-5 text-[#188f00] font-semibold pt-8">
-          Quick Access
-        </h1>
-      <div className="flex flex-col lg:flex-row gap-10 pt-20">
-        <div className=" mb-20 gap-2 flex flex-wrap px-5 lg:w-1/2 text-white ">
+      <div className="flex gap-10 pt-20">
+        <div className="mb-20 gap-4 flex flex-wrap w-1/2 text-white ">
           {cards.map((card) => (
             <HoverCard
               key={card.id}
@@ -70,9 +67,9 @@ const InfoCards: React.FC = () => {
             />
           ))}
         </div>
-        <div className="px-5">
-          <div className=" bg-slate-100 dark:bg-[#0f3636] rounded-2xl">
-            <h1 className="text-2xl py-3 rounded-t-2xl px-10 text-white font-semibold bg-gradient-to-r from-[#006a4e] to-[#188f00] dark:from-[#064e3b] dark:to-[#14532d]">
+        <div className="w-1/2">
+          <div className=" bg-slate-100 rounded-2xl">
+            <h1 className="text-2xl py-3 rounded-t-2xl px-10 text-white font-semibold bg-gradient-to-r from-[#006a4e] to-[#188f00] dark:bg-gradient-to-r from-[#064e3b] to-[#14532d]">
               Internal eServices
             </h1>
             <div className="px-10 py-6 text-xl space-y-2 ">
@@ -97,8 +94,8 @@ const InfoCards: React.FC = () => {
               </Link>
             </div>
           </div>
-          <div className="mt-10 bg-slate-100 dark:bg-[#0f3636] rounded-2xl">
-            <h1 className="text-2xl py-3 rounded-t-2xl px-10 text-white font-semibold bg-gradient-to-r from-[#006a4e] to-[#188f00] dark:from-[#064e3b] dark:to-[#14532d] ">
+          <div className="mt-10 bg-slate-100 rounded-2xl">
+            <h1 className="text-2xl py-3 rounded-t-2xl px-10 text-white font-semibold bg-gradient-to-r from-[#006a4e] to-[#188f00] dark:bg-gradient-to-r from-[#064e3b] to-[#14532d]">
               Important Links
             </h1>
             <div className="px-10 py-6 text-xl space-y-2">
@@ -126,8 +123,8 @@ const InfoCards: React.FC = () => {
             </div>
           </div>
           
-          <div className=" mt-10 bg-slate-100 dark:bg-[#0f3636] rounded-2xl">
-            <h1 className="text-2xl py-3 rounded-t-2xl px-10 text-white font-semibold bg-gradient-to-r from-[#006a4e] to-[#188f00] dark:from-[#064e3b] dark:to-[#14532d]">
+          <div className=" mt-10 bg-slate-100  rounded-2xl">
+            <h1 className="text-2xl py-3 rounded-t-2xl px-10 text-white font-semibold bg-gradient-to-r from-[#006a4e] to-[#188f00] dark:bg-gradient-to-r from-[#064e3b] to-[#14532d]">
               Visitor Count
             </h1>
             <div className="flex justify-center py-10">
@@ -188,7 +185,7 @@ const cards = [
     image: "/icons/policies.png",
   },
   {
-    id: 3,
+    id: 4,
     title: "Citizen e-Services",
     links: [
       "Donation in ICT Innovation",
@@ -199,7 +196,7 @@ const cards = [
     image: "icons/e-service.png",
   },
   {
-    id: 3,
+    id: 5,
     title: "Citizen's Charter",
     links: [
       "Citizen's Charter",
@@ -210,7 +207,7 @@ const cards = [
     image: "/icons/CitizenCharter.png",
   },
   {
-    id: 3,
+    id: 6,
     title: "Annual Performance Management",
     links: [
       "Guidelines/Circulars/APA Team/Focal Point",
@@ -221,7 +218,7 @@ const cards = [
     image: "/icons/apa.png",
   },
   {
-    id: 3,
+    id: 7,
     title: "National Integrity Strategy",
     links: [
       "Best Practice Work Plan Web Link",
@@ -232,7 +229,7 @@ const cards = [
     image: "/icons/nis_logo3.png",
   },
   {
-    id: 3,
+    id: 8,
     title: "Grievance Redress System",
     links: [
       "GRS and Appellate Officers",
@@ -243,7 +240,7 @@ const cards = [
     image: "/icons/Grievance.png",
   },
   {
-    id: 3,
+    id: 9,
     title: "Right to Information",
     links: [
       "GRS and Appellate Officers",
@@ -254,7 +251,7 @@ const cards = [
     image: "/icons/infocom.png",
   },
   {
-    id: 3,
+    id: 10,
     title: "Innovative Activities",
     links: [
       "GRS and Appellate Officers",
@@ -265,7 +262,7 @@ const cards = [
     image: "/icons/InnovativeActivities.png",
   },
   {
-    id: 3,
+    id: 11,
     title: "Service Process Simplification",
     links: [
       "GRS and Appellate Officers",
@@ -276,7 +273,7 @@ const cards = [
     image: "/icons/ServiceProcess.png",
   },
   {
-    id: 3,
+    id: 12,
     title: "SDG and Development Plan",
     links: [
       "GRS and Appellate Officers",
@@ -287,7 +284,7 @@ const cards = [
     image: "/icons/FinalLogoSDG.png",
   },
   {
-    id: 3,
+    id: 13,
     title: "Budget & Projects",
     links: [
       "GRS and Appellate Officers",
@@ -298,7 +295,7 @@ const cards = [
     image: "/icons/budget.png",
   },
   {
-    id: 3,
+    id: 14,
     title: "Miscellaneous",
     links: [
       "GRS and Appellate Officers",

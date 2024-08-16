@@ -44,10 +44,10 @@ const InCharge: React.FC = () => {
 
   return (
     <ComponentLayout>
-      <h1 className="text-3xl text-[#188f00] font-light py-8 pb-16">
-        In <span className="text-secondary font-semibold">Charge</span>
+      <h1 className="text-3xl px-5 text-[#188f00] font-semibold py-8 pb-16">
+        In Charge
       </h1>
-      <div className="flex flex-row pb-32 gap-10">
+      <div className="flex flex-col md:flex-row pb-32 px-5 gap-10">
         {advisers.map((adviser) => (
           <Card
             key={adviser.id}
