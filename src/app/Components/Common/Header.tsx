@@ -24,6 +24,7 @@ export default function App() {
         className="bg-gradient-to-r from-[#006a4e] to-[#188f00] dark:from-[#064e3b] dark:to-[#14532d] text-white px-4 sm:px-20"
         maxWidth="full"
         isBordered
+        
       >
         <NavbarContent className="flex justify-between items-center w-full">
           <NavbarBrand className="flex items-center">
@@ -69,7 +70,7 @@ export default function App() {
             </NavbarItem>
           </NavbarContent>
 
-          <NavbarContent style={{justifyContent: "endgit a"}} className="flex items-center gap-4">
+          <NavbarContent justify="end" className="flex items-center gap-4">
             <Input
               classNames={{
                 base: "max-w-full sm:max-w-[10rem] h-10",

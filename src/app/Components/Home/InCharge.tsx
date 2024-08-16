@@ -95,8 +95,8 @@ const InCharge: React.FC = () => {
           onClose={closeModal}
           aria-labelledby="modal-title"
         >
-          <ModalContent>
-            <ModalHeader className="items-center mb-8 gap-2 bg-gradient-to-r from-[#006a4e] to-[#188f00]">
+          <ModalContent className="bg-slate-100  dark:bg-[#071818]">
+            <ModalHeader className="items-center mb-8 gap-2 bg-gradient-to-r from-[#006a4e] to-[#188f00] dark:from-[#064e3b] dark:to-[#14532d]">
               <p className="text-2xl text-white font-bold" id="modal-title">
                 {selectedAdviser.name}
               </p>
@@ -104,7 +104,7 @@ const InCharge: React.FC = () => {
                 {selectedAdviser.post}
               </p>
             </ModalHeader>
-            <ModalBody>
+            <ModalBody >
               <div className=" flex gap-5">
                 <Image
                   src={selectedAdviser.image}
@@ -113,10 +113,10 @@ const InCharge: React.FC = () => {
                   height={200}
                   className="rounded-xl mx-auto mb-4"
                 />
-                <p className="text-sm text-gray-700 w-1/2">{selectedAdviser.about1}</p>
+                <p className="text-sm text-gray-700 dark:text-gray-200 w-1/2">{selectedAdviser.about1}</p>
               </div>
 
-              <div className="text-sm text-gray-700 space-y-5">
+              <div className="text-sm text-gray-700 dark:text-gray-200 space-y-5">
                 <p>{selectedAdviser.about2}</p>
                 <p>{selectedAdviser.about3}</p>
               </div>
@@ -124,7 +124,7 @@ const InCharge: React.FC = () => {
             <ModalFooter>
               <Button
                 onClick={closeModal}
-                className="bg-gradient-to-r from-[#006a4e] to-[#188f00] text-white font-semibold"
+                className="bg-gradient-to-r from-[#006a4e] to-[#188f00] dark:from-[#064e3b] dark:to-[#14532d] text-white font-semibold"
               >
                 Close
               </Button>
