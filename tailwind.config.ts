@@ -10,14 +10,29 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // backgroundImage: {
-      //   "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-      //   "gradient-conic":
-      //     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      // },
+      colors: {
+        // Customizing NextUI secondary color
+        secondary: {
+          DEFAULT: "#4ade80", // Default secondary color
+          light: "#86efac",  // Light variant of the secondary color
+          dark: "#166534",   // Dark variant of the secondary color
+        },
+      },
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          secondary: "#4ade80", // Custom secondary color in light mode
+        },
+        dark: {
+          secondary: "#86efac", // Custom secondary color in dark mode
+        },
+      },
+    }),
+  ],
 };
+
 export default config;

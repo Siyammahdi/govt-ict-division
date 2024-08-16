@@ -1,3 +1,4 @@
+// src/components/ThemeToggle.tsx
 "use client";
 
 import { Switch } from "@nextui-org/react";
@@ -29,7 +30,7 @@ export default function ThemeToggle() {
       <Switch
         isSelected={theme === "dark"}  // Bind the switch state to the theme
         onChange={toggleTheme}         // Toggle theme on switch change
-        size="lg"
+        size="md"
         color="secondary"
         startContent={<LuSun />}
         endContent={<FaMoon />}
